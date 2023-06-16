@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "first_name": "Arvy",
+    "last_name": "Derisley",
+    "email": "aderisley0@4shared.com",
+    "gender": "Male",
+    "ip_address": "192.49.240.128"
+  },
+  {
+    "id": 2,
+    "first_name": "Stanley",
+    "last_name": "Arnefield",
+    "email": "sarnefield1@flickr.com",
+    "gender": "Male",
+    "ip_address": "138.131.169.201"
+  },
+  {
+    "id": 3,
+    "first_name": "Ruperto",
+    "last_name": "Klimes",
+    "email": "rklimes2@nature.com",
+    "gender": "Male",
+    "ip_address": "254.250.229.74"
+  },
+  {
+    "id": 4,
+    "first_name": "Felice",
+    "last_name": "Clearie",
+    "email": "fclearie3@ebay.com",
+    "gender": "Female",
+    "ip_address": "221.22.81.45"
+  },
+  {
+    "id": 5,
+    "first_name": "Gardie",
+    "last_name": "Axleby",
+    "email": "gaxleby4@upenn.edu",
+    "gender": "Male",
+    "ip_address": "245.186.229.214"
+  },
+  {
+    "id": 6,
+    "first_name": "Bidget",
+    "last_name": "Airton",
+    "email": "bairton5@businesswire.com",
+    "gender": "Female",
+    "ip_address": "254.28.9.153"
+  },
+  {
+    "id": 7,
+    "first_name": "Carry",
+    "last_name": "Petrolli",
+    "email": "cpetrolli6@goodreads.com",
+    "gender": "Polygender",
+    "ip_address": "134.235.205.176"
+  },
+  {
+    "id": 8,
+    "first_name": "Ike",
+    "last_name": "Mortell",
+    "email": "imortell7@hao123.com",
+    "gender": "Male",
+    "ip_address": "180.167.80.45"
+  },
+  {
+    "id": 9,
+    "first_name": "Leif",
+    "last_name": "Leve",
+    "email": "lleve8@zimbio.com",
+    "gender": "Male",
+    "ip_address": "2.124.95.156"
+  },
+  {
+    "id": 10,
+    "first_name": "Tanner",
+    "last_name": "Hritzko",
+    "email": "thritzko9@qq.com",
+    "gender": "Male",
+    "ip_address": "140.23.5.147"
+  }
+]
