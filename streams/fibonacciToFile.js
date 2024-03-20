@@ -1,7 +1,6 @@
-const { Readable, Transform, pipeline } = require("stream");
+const { Readable, Transform } = require("stream");
 const { createWriteStream } = require("fs");
-const { promisify } = require("util");
-const pipelinePromise = promisify(pipeline);
+const { pipeline } = require("stream").promises;
 const fibonacci = require("../generators/fibonacci").fibonacci;
 
 const fibonacciToFile = async () => {
@@ -17,7 +16,7 @@ const fibonacciToFile = async () => {
     },
   });
   const writable = createWriteStream("./results/fib1000.txt");
-  await pipelinePromise(readable, transform, writable);
+  await pipeline(readable, transform, writable);
 };
 
 fibonacciToFile();

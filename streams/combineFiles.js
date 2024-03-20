@@ -1,7 +1,6 @@
-const { Transform, pipeline, Readable } = require("stream");
+const { Transform, Readable } = require("stream");
 const { createWriteStream, createReadStream } = require("fs");
-const { promisify } = require("util");
-const pipelinePromise = promisify(pipeline);
+const { pipeline } = require("stream").promises;
 const split2 = require("split2");
 
 async function* concatStreamsGenerator(readables) {
@@ -47,7 +46,7 @@ const combineFiles = async () => {
     },
   });
 
-  await pipelinePromise(
+  await pipeline(
     readable,
     split2(),
     lineToObjectTransform,

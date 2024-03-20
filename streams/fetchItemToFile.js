@@ -1,7 +1,6 @@
-const { Readable, Transform, pipeline } = require("stream");
+const { Readable, Transform } = require("stream");
 const { createWriteStream } = require("fs");
-const { promisify } = require("util");
-const pipelinePromise = promisify(pipeline);
+const { pipeline } = require("stream").promises;
 const fetchItemGenerator =
   require("../generators/fetchItemGenerator").fetchItemGenerator;
 
@@ -18,7 +17,7 @@ const fetchItemToFile = async () => {
     },
   });
   const writable = createWriteStream("./results/people.json");
-  await pipelinePromise(readable, transformToText, writable);
+  await pipeline(readable, transformToText, writable);
 };
 
 fetchItemToFile();

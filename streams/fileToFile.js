@@ -1,7 +1,6 @@
-const { Transform, pipeline } = require("stream");
+const { Transform } = require("stream");
 const { createWriteStream } = require("fs");
-const { promisify } = require("util");
-const pipelinePromise = promisify(pipeline);
+const { pipeline } = require("stream").promises;
 const { getItemsFromFile } = require("./getItemsFromFile");
 
 const fileToFile = async () => {
@@ -26,7 +25,7 @@ const fileToFile = async () => {
 
   const writable = createWriteStream("./results/male.json");
 
-  await pipelinePromise(
+  await pipeline(
     getItemsFromFile("./results/people.json"),
     genderFilterTransform,
     transformToText,
