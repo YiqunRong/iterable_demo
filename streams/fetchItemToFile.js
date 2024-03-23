@@ -16,7 +16,7 @@ const fetchItemToFile = async () => {
       callback();
     },
   });
-  const writable = createWriteStream("./results/people.json");
+  const writable = createWriteStream("./results/people.jsonl");
   await pipeline(readable, transformToText, writable);
 };
 

@@ -14,9 +14,9 @@ const concatStreams = (readables) =>
   Readable.from(concatStreamsGenerator(readables));
 
 const combineFiles = async () => {
-  const readableMale = createReadStream("./results/male.json");
-  const readableFemale = createReadStream("./results/female.json");
-  const writable = createWriteStream("./results/combined.json");
+  const readableMale = createReadStream("./results/male.jsonl");
+  const readableFemale = createReadStream("./results/female.jsonl");
+  const writable = createWriteStream("./results/combined.jsonl;");
   const readable = concatStreams([readableMale, readableFemale]);
 
   const lineToObjectTransform = new Transform({

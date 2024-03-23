@@ -23,10 +23,10 @@ const fileToFile = async () => {
     },
   });
 
-  const writable = createWriteStream("./results/male.json");
+  const writable = createWriteStream("./results/male.jsonl");
 
   await pipeline(
-    getItemsFromFile("./results/people.json"),
+    getItemsFromFile("./results/people.jsonl"),
     genderFilterTransform,
     transformToText,
     writable
